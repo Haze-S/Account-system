@@ -46,8 +46,8 @@ class AccountServiceTest {
                 .willReturn(Optional.of(user));
         given(accountRepository.findFirstByOrderByIdDesc())
                 .willReturn(Optional.of(Account.builder()
-                                .accountUser(user)
-                                .accountNumber("1000000012").build()));
+                        .accountUser(user)
+                        .accountNumber("1000000012").build()));
         given(accountRepository.save(any()))
                 .willReturn(Account.builder()
                         .accountUser(user)
