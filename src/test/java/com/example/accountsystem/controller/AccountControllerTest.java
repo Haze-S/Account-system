@@ -7,7 +7,6 @@ import com.example.accountsystem.dto.DeleteAccount;
 import com.example.accountsystem.exception.AccountException;
 import com.example.accountsystem.type.AccountStatus;
 import com.example.accountsystem.service.AccountService;
-import com.example.accountsystem.service.RedisTestService;
 import com.example.accountsystem.type.ErrorCode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
@@ -33,9 +32,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class AccountControllerTest {
     @MockBean
     private AccountService accountService;
-
-    @MockBean
-    private RedisTestService redisTestService;
 
     @Autowired
     private MockMvc mockMvc;
